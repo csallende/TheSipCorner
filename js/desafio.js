@@ -26,15 +26,28 @@ function usuario (anioNacimiento, edad){
 
 }
 
-	 var usuario1= new usuario1("2003", 18)
+	 var usuario1= new usuario("2003", 18);
+	 var usuario2= new usuario("1992",29);
+
+	 console.log(usuario());
 
 
-var edadUsuario=[
-	new edadUsuario (18),
-	new edadUsuario (25),
-	new edadUsuario (50),
-	new edadUsuario (20),
-	new edadUsuario (35),
-]
+var usuarios=[];
+	usuarios.push(usuario1,usuario2);
 
-console.log(edadUsuario.lenght)
+
+console.log(edadUsuario.length)
+
+
+// Desafío DOM
+
+var boton=document.getElementByClassName("btn btn-primary py-2 px-4");
+
+boton[0];
+
+var parrafo=document.getElementByTagName("p");
+parrafo[6];
+
+var parrafo=boton.parentNode;
+
+boton.parentNode.removeChild(boton);
