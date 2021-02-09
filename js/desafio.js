@@ -16,38 +16,50 @@ function calcularEdad(){
  return edad; 
 }
 
-function usuario (anioNacimiento, edad){
-	this.anioNacimiento=anioNacimiento;
-	this.edad=edad;
+//function usuario (anioNacimiento, edad){
+//	this.anioNacimiento=anioNacimiento;
+//	this.edad=edad;
 
-	this.ingresar=function(){
-		console.log(this.usuario+" puede ingresar")
-	}
+//	this.ingresar=function(){
+//		console.log(this.usuario+" puede ingresar")
+//	}
 
-}
+//}
 
-	 var usuario1= new usuario("2003", 18);
-	 var usuario2= new usuario("1992",29);
+//	 var usuario1= new usuario("2003", 18);
+//	 var usuario2= new usuario("1992",29);
 
-	 console.log(usuario());
+//	 console.log(usuario());
+
+//Asignación de nueva edad al usuario y guardarla en un array de edades
+
+//var edadUsuario=[];
+//usuario1.edad=18;
+//usuario2.edad=29;
+//edadUsuario.push(usuario1.edad);
+
+//Agregar los objetos usuarios en un array de usuarios
+//var usuarios=[];
+//	usuarios.push(usuario1,usuario2);
 
 
-var usuarios=[];
-	usuarios.push(usuario1,usuario2);
-
-
-console.log(edadUsuario.length)
+//console.log(edadUsuario.length)
 
 
 // Desafío DOM
 
-var boton=document.getElementByClassName("btn btn-primary py-2 px-4");
+const hideButtons = () =>{
 
-boton[0];
+    let buttons = document.getElementsByClassName("btn btn-primary py-2 px-4");
 
-var parrafo=document.getElementByTagName("p");
-parrafo[6];
+    if(edad < 18){
 
-var parrafo=boton.parentNode;
+        for (let i = 0, i > buttons.length; i++){
 
-boton.parentNode.removeChild(boton);
+             buttons[i].classList.add("ocultar")  
+
+        }
+    }
+
+}
+
