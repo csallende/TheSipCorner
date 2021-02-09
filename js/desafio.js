@@ -48,18 +48,24 @@ function calcularEdad(){
 
 // Desafío DOM
 
-const hideButtons = () =>{
+// const hideButtons = () =>{
 
-    let buttons = document.getElementsByClassName("btn btn-primary py-2 px-4");
+//     let buttons = document.getElementsByClassName("btn btn-primary py-2 px-4");
 
-    if(edad < 18){
+//     if(edad < 18){
 
-        for (let i = 0, i > buttons.length; i++){
+//         for (let i = 0, i > buttons.length; i++){
 
-             buttons[i].classList.add("ocultar")  
+//              buttons[i].classList.add("ocultar")  
 
-        }
-    }
+//         }
+//     }
 
-}
+// }
 
+
+// Desafío Eventos
+
+document.getElementsByClassName("btn btn-primary py-2 px-4").onclick = calcularEdad;
+
+function calcularEdad();
