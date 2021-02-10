@@ -16,55 +16,64 @@ function calcularEdad(){
  return edad; 
 }
 
-//function usuario (anioNacimiento, edad){
-//	this.anioNacimiento=anioNacimiento;
-//	this.edad=edad;
+// Storage
 
-//	this.ingresar=function(){
-//		console.log(this.usuario+" puede ingresar")
-//	}
+session.Storage.setItem('edad', 18);
+session.Storage.edad(18);
 
-//}
+// Objeto
 
-//	 var usuario1= new usuario("2003", 18);
-//	 var usuario2= new usuario("1992",29);
+function usuario (anioNacimiento, edad){
+	this.anioNacimiento=anioNacimiento;
+	this.edad=edad;
 
-//	 console.log(usuario());
+	this.ingresar=function(){
+		console.log(this.usuario+" puede ingresar")
+	}
+}
+
+	var usuario1= new usuario("2003", 18);
+	var usuario2= new usuario("1992",29);
+
+	console.log(usuario());
+
+	console.log(JSON.stringify(usuario));
 
 //Asignación de nueva edad al usuario y guardarla en un array de edades
 
-//var edadUsuario=[];
-//usuario1.edad=18;
-//usuario2.edad=29;
-//edadUsuario.push(usuario1.edad);
+var edadUsuario=[];
+usuario1.edad=18;
+usuario2.edad=29;
+edadUsuario.push(usuario1.edad);
 
 //Agregar los objetos usuarios en un array de usuarios
-//var usuarios=[];
-//	usuarios.push(usuario1,usuario2);
+var usuarios=[];
+	usuarios.push(usuario1,usuario2);
+
+	console.log(edadUsuario.length)
 
 
-//console.log(edadUsuario.length)
 
 
-// Desafío DOM
+// DOM
 
-// const hideButtons = () =>{
+const hideButtons = () =>{
 
-//     let buttons = document.getElementsByClassName("btn btn-primary py-2 px-4");
+     let buttons = document.getElementsByClassName("btn btn-primary py-2 px-4");
 
-//     if(edad < 18){
+     if(edad < 18){
 
-//         for (let i = 0, i > buttons.length; i++){
+         for (let i = 0, i > buttons.length; i++){
 
-//              buttons[i].classList.add("ocultar")  
+              buttons[i].classList.add("ocultar")  
 
-//         }
-//     }
+         }
+     }
 
-// }
+}
 
 
-// Desafío Eventos
+// Eventos
 
 document.getElementsByClassName("btn btn-primary py-2 px-4").onclick = calcularEdad;
 
