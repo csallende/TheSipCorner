@@ -63,7 +63,7 @@ const hideButtons = () =>{
 
      if(edad < 18){
 
-         for (let i = 0, i > buttons.length; i++){
+         for (let i = 0, i < buttons.length; i++){
 
               buttons[i].classList.add("ocultar")  
 
