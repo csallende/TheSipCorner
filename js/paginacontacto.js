@@ -1,5 +1,13 @@
 
 $(document).ready(function(){
 	$(":submit").click(function(){
-		alert('Recibimos tu mensaje, nos comunicaremos a la brevedad');
+		$.ajax({
+			url: "usuarios/datos.json",
+			success: function(response){
+				$.each(response.usuarios, function(item){
+					alert(item.nombre);
+				});
+			},
+		})
+
 	});
